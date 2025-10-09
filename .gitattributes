@@ -1,0 +1,15 @@
+# Default: let Git detect text and handle conversion
+* text=auto
+
+# Explicitly treat C / C++ source/header files as text and enable diff
+*.h     text diff=cpp
+*.hpp   text diff=cpp
+*.c     text diff=cpp
+*.cc    text diff=cpp
+*.cpp   text diff=cpp
+*.cxx   text diff=cpp
+
+# (Optional) Enforce UNIX-style line endings (LF) for these
+# Uncomment if you want to force LF in the repository
+# *.h     eol=lf
+# *.cpp   eol=lf
