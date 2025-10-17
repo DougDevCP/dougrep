@@ -310,7 +310,7 @@ void RunOpenCL_GPU_and_CPU() {
     if (err != CL_SUCCESS || !outBuffer) return;
 
     UINT seed = (UINT)time(NULL);
-    int cellSize = ctl(5); // You can make this user-controlled later
+    int cellSize = gParams->ctl[0].val; // You can make this user-controlled later
     if (cellSize < 1) cellSize = 1; // Prevent divide-by-zero
 
     clSetKernelArg(clKernel, 0, sizeof(cl_mem), &outBuffer);
